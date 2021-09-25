@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&display=swap');
+
+    h1 {
+        font-family: 'Birthstone Bounce', cursive;
+        text-align: center;
+    }
+
+    #username {
+        margin-bottom: 10px;
+    }
+
+    #password {
+        margin-bottom: 10px;
+    }
+
+    .theform {
+        text-align: center;
+        padding: 5%;
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+        /* border: 2px solid red; */
+    }
+
+    .theform input {
+        width: 100%;
+        padding: 5px 10px;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+    }
+
+    .theform button {
+        width: 100%;
+        padding: 5px 10px;
+        margin: 10px 5px;
+    }
+
+    .form_container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .errors p {
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: red;
+        margin: 2.5px 0;
+    }
+</style>
+
+<body id="body">
+    <h1>Register For a Free trial!</h1>
+    <div class="form_container">
+        <div class="theform">
+            <form id="form">
+                <input type="text" name="username" id="username" placeholder="Enter Your Username"><br />
+                <input type="password" name="password" id="password" placeholder="Enter Your Password"><br>
+                <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Confirm password"><br>
+                <button id="register">Register</button>
+            </form>
+            <div class="errors" id="errors"></div>
+        </div>
+    </div>
+
+    <script>
+        const username = document.getElementById("username")
+        const password = document.getElementById("password")
+        const confirmpassword = document.getElementById("confirmpassword")
+        const form = document.getElementById("form")
+        const errors = document.getElementById("errors")
+        const body = document.getElementById("body")
+
+        
+        
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            errors.innerHTML = ""
+
+            if (username.value === "") {
+                username.style.borderColor = "red"
+                errors.innerHTML += "<p>Please enter the username</p>"
+            } else {
+                username.style.borderColor = "green"
+            }
+
+            if (password.value === "") {
+                password.style.borderColor = "red"
+                errors.innerHTML += "<p>Please enter you password</p>"
+            } else {
+                password.style.borderColor = "green"
+            }
+
+            if (confirmpassword.value === "") {
+                confirmpassword.style.borderColor = "red"
+                errors.innerHTML += "<p>Please Confirm your password</p>"
+            } else {
+                confirmpassword.style.borderColor = "green"
+            }
+
+            if (password.value === confirmpassword.value) {
+                confirmpassword.style, borderColor = "green"
+            } else {
+                confirmpassword.style.borderColor = "red"
+                errors.innerHTML += "<p>Your confirmed password is not the same as your password</p>"
+            }
+        }
+        )
+
+
+    </script>
+
+</body>
+
+</html>
