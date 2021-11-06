@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_styling.css">
+    <title>Arrays In JavaScript</title>
+</head>
+
+<body>
+    <h1>Arrays In JavaScript</h1>
+
+    <ul id="food_items_list"></ul>
+
+    <script>
+
+        const food_items_list = document.getElementById("food_items_list")
+
+        // create a normal array
+
+        //                      0           1                           2               3               4
+        let food_items = ["Apples Pie", "Strawberry Cheesecake", "Tuna Sandwich", "Butter Chicken", "Doughnuts"]
+
+        // console.log(food_items)
+
+        // access items in an array using an index number
+
+        // console.log(food_items[2])
+
+        // accessing all items in an array usinf for loops
+
+        function printArray() {
+            food_items_list.innerHTML = ""
+            for (let food in food_items) {
+                // console.log(food_items[food])
+                food_items_list.innerHTML += `<li> ${food_items[food]} </li>`
+            }
+        }
+
+        for (let food in food_items) {
+            // console.log(food_items[food])
+            food_items_list.innerHTML += `<li> ${food_items[food]} </li>`
+        }
+
+        // adding items in an array
+
+        // push() -> adds an item at the end of an array
+
+        food_items.push("Greek Salad")
+
+        // unshift ->  adds the item in first index
+
+        food_items.unshift("Tomato Green Salad")
+
+        // pop() - > removes the last item in an array
+
+        food_items.pop()
+        
+        // shift -> removes the first item in an array
+
+        food_items.shift()
+
+
+        // removing items by specifying the item in an existing array
+
+        food_items = food_items.filter(
+            function(value, index, arr) {
+                return value != "Tuna Sandwich" 
+            }
+        )
+
+        printArray();
+    </script>
+</body>
+
+</html>

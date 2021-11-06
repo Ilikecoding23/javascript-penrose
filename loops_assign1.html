@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Calistoga&display=swap');
+
+    * {
+        font-family: 'Calistoga', cursive;
+    }
+
+    .todo_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60vh;
+        flex-direction: column;
+    }
+
+    .todo_app {
+        border: 1px black solid;
+        padding: 3%
+    }
+</style>
+
+
+<body>
+    <div class="todo_container">
+        <div class="todo_app">
+            <h1>To do list</h1>
+
+            <ul id="to_do"></ul>
+
+            <div class="todo_tasks">
+                <input type="text" name="to_do" id="to_do_name" placeholder="Enter Next To Do">
+
+                <button id="add">Add</button>
+                <button id="finished">finished</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let to_do = document.getElementById("to_do")
+        let to_do_list = ["Laundry", "homework", "dishes", "studying"]
+
+        function printList() {
+            to_do.innerHTML = ""
+
+            for (let to_do_item in to_do_list) {
+                to_do.innerHTML += `<li> ${to_do_list[to_do_item]} </li>`
+            }
+        }
+
+        printList()
+
+        document.getElementById("add").addEventListener("click", function () {
+
+            const to_do_name = document.getElementById("to_do_name")
+            to_do_list.push(to_do_name.value)
+            printList()
+
+        });
+
+        document.getElementById("finished").addEventListener("click", function () {
+
+            const to_do_name = document.getElementById("to_do_name")
+            to_do_list = to_do_list.filter(
+                function (value, index, arr) {
+                    return value != to_do_name.value
+                }
+            )
+            printList()
+
+        });
+
+
+
+    </script>
+</body>
+
+</html>

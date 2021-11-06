@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_styling.css">
+    <title>Loops in JS</title>
+</head>
+<body>
+    <h1>Loops in JavaScript</h1>
+
+    <script>
+        // for loops
+
+        let colors = ['red','blue','green']
+
+        for(let color of colors) {
+            console.log(color)
+        }        
+
+        // manual for loop
+
+        //                 itr < 3
+        for(let itr=0; itr < colors.length; itr++) {
+            console.log(colors[itr])
+        }
+
+        // while loop
+        
+        let counter = 0
+
+        while(counter != 25) {
+            counter++
+
+            console.log(counter)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_styling.css">
+    <title>IF Statements</title>
+</head>
+<body>
+    <h1>IF Statements</h1>
+
+    <input type="number" id="num" onchange="checkGrade()" placeholder="ENTER A NUMBER">
+
+    <p id="result"></p>
+
+    <script>
+        const result = document.getElementById("result")
+
+        function checkGrade() {
+            const num = document.getElementById("num")
+            let score = parseInt(num.value)
+
+            if (score <= 100 && score >= 90) {
+                result.innerHTML = `The grade is A.`
+            }
+            else if (score < 90 && score >= 80) {
+                result.innerHTML = `The grade is B.`
+            }
+            else if (score < 80 && score >= 70) {
+                result.innerHTML = `The grade is C.`
+            }
+            else if (score < 70 && score >= 60) {
+                result.innerHTML = `The grade is C-.`
+            }
+            else if (score < 60 && score >= 50) {
+                result.innerHTML = `The grade is D.`
+            }
+            else if (score < 50) {
+                result.innerHTML = `The grade is F.`
+            }
+            else {
+                result.innerHTML = "Invalid Number."
+            }
+
+        }
+    </script>
+</body>
+</html>

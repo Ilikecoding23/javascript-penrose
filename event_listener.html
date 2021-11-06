@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_styling.css">
+    <title>Event Listeners</title>
+</head>
+<body id="body">
+    <h1>Event Listeners</h1>
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores officia, eaque porro quia consequatur doloribus. Error aliquam molestiae vitae enim eum sed perferendis vel maiores culpa impedit. Dignissimos, molestias accusantium!</p>
+
+    <button id="dark_mode">Dark Mode</button>
+    <button id="light_mode">Light Mode</button>
+
+    <script>
+        const dark_mode = document.getElementById("dark_mode")
+        const light_mode = document.getElementById("light_mode")
+
+        const body = document.getElementById("body")
+
+        dark_mode.addEventListener("click", function() {
+            body.style.backgroundColor = "black"
+            body.style.color = "white"
+        })
+
+        light_mode.addEventListener("click", function() {
+            body.style.backgroundColor = "white"
+            body.style.color = "black"
+        })
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_styling.css">
+    <title>HTML Events</title>
+
+    <style>
+        .image.hide {
+            visibility: hidden;
+        }
+
+        .image.view {
+            visibility: visible;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML Events</h1>
+
+    <h2 id="game_title">DAYS GONE</h2>
+
+    <button onclick="setVisibilty('view')">View GamepLay Image</button> 
+    <button onclick="setVisibilty('hide')">Hide GamepLay Image</button>
+
+    <img class="image" src="https://i.gadgets360cdn.com/large/days_gone_cover_1556184572075.jpg" id="image"
+        alt="days_gone">
+
+    <input type="number" id="font_size" value="20" onchange="setTitleFontSize()">
+
+    <script>
+        const image = document.getElementById("image")
+
+        function setVisibilty(addClassRule) {
+            image.className = `image ${addClassRule}`
+            // alert("setVisibility Function Acceessed " + addClassRule)
+        }
+
+        function setTitleFontSize() {
+
+            const font_size = document.getElementById("font_size").value
+            const game_title = document.getElementById("game_title")
+            console.log(font_size)
+            game_title.style.fontSize = `${font_size} px`
+        }
+    </script>
+</body>
+
+</html>

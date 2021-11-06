@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Assignment 1</title>
+
+    <style>
+         
+    </style>
+</head>
+
+<body>
+    <h3 id="message"></h3>
+
+    <script>
+
+        const name = prompt("Enter your Name please: ")
+        const grade = prompt("Enter your Grade please: ")
+        const school = prompt("Enter your School please: ")
+
+        x = document.getElementById("message");
+
+        // let name = "David"
+        // name = "John"
+        // name = "Jessy"
+
+        // console.log(name)
+
+        x.innerHTML = "<ul>"
+        x.innerHTML += `<li> Name:  ${name} </li>`
+        x.innerHTML += `<li> Grade:  ${grade} </li>`
+        x.innerHTML += ` <li> School:  ${school} </li> `
+        x.innerHTML += "</ul>"
+
+
+        x.style.color = 'white';
+        x.style.backgroundColor = 'lightgreen';
+        x.style.padding = "10px";
+
+
+    </script>
+</body>
+
+</html>

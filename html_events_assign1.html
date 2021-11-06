@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortnite Skins</title>
+
+    <style>
+        * {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .selected_skin {
+            background-color: ();
+            padding: 10px;
+            border: 1px solid;
+            width: 100px;
+        }
+
+        li {
+            cursor: pointer;
+        }
+
+        body {
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+
+<body id="body">
+
+    <div class="container">
+        <h2>Selected Skin for your Game</h2>
+        <h3 id="selected_skin" class="selected_skin"></h3>
+
+        <h4>Click a Skin to Select it</h4>
+        <ul>
+            <li onclick="setSelectedSkin('pink', 'blue')">Guff</li>
+            <li onclick="setSelectedSkin('blue','lightblue')">Rippley</li>
+            <li onclick="setSelectedSkin('red', 'orange' )">Blaze</li>
+            <li onclick="setSelectedSkin('blue', 'orange')">Fishstick</li>
+        </ul>
+    </div>
+    <script>
+        function setSelectedSkin(selectedSkinColor1, selectedSkinColor2) {
+            document.getElementById("selected_skin").style.backgroundImage = `linear-gradient(45deg, ${selectedSkinColor1},${selectedSkinColor2})`
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_styling.css">
+    <title>Functions and Events</title>
+</head>
+
+<body>
+    <h1>Functions and Events</h1>
+
+    <p id="result"></p>
+
+    <script>
+        const num1 = parseInt(prompt("Enter the first number"))
+        const num2 = parseInt(prompt("Enter the second number"))
+
+        const result = document.getElementById("result")
+
+        let sum = num1 + num2
+        let difference = num1 - num2
+
+        const option = parseInt(prompt("1. Add \n2. Subtract"))
+
+        function printResult(final_result) {
+            result.innerText = final_result
+        }
+
+        if (option == 1) {
+            printResult(sum)
+        } else if (option == 2) {
+
+            printResult(difference);
+        } else {
+            alert("Invalid Option")
+        }
+
+    </script>
+</body>
+
+</html>

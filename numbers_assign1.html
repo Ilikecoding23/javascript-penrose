@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calorie calculator</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+  * {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+  h1 {
+    font-family: 'Lobster', cursive;
+  }
+
+</style>
+
+<body>
+  <h1> Calorie Calculator: </h1>
+
+  <label>Enter Protein: </label>
+  <input type="number" id="protein">
+  <br />
+
+  <label>Enter Carbohydrates: </label>
+  <input type="number" id="carbohydrates">
+  <br />
+
+
+  <label>Enter Fat: </label>
+  <input type="number" id="fat">
+  <br />
+
+  <button id="total_calories">Calculate Total Calories</button>
+
+  <div id="result">
+    
+  </div>
+
+  <script>
+
+    
+    const carbohydrates = document.getElementById("carbohydrates") 
+    const protein = document.getElementById("protein")
+    const fat = document.getElementById("fat")
+
+    // document.getElementById() -> whenever I have to take information or access the HTML elements!
+
+    const result = document.getElementById("result")
+    
+    document.getElementById("total_calories").addEventListener("click", function () {
+
+      let protein_cal = parseInt(protein.value) * 4
+      let carbohydrates_cal = parseInt(carbohydrates.value) * 4
+      let fat_cal = parseInt (fat.value) * 9
+
+      result.innerHTML = `<h1>Total Calories</h1>
+    <h3>Protein = ${protein_cal}</h1>
+    <h3>Carbohydrates = ${carbohydrates_cal}</h1>
+    <h3>Fat = ${fat_cal}.</h1>
+    <h3>Total Calories = ${protein_cal+carbohydrates_cal+fat_cal}.</h1> `
+
+      // console.log(protein_cal)
+      // console.log(carbohydrates_cal)
+      // console.log(fat_cal)
+
+      // console.log(protein_cal+carbohydrates_cal+fat_cal)
+    })
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_styling.css">
+    <title>Arrays In JavaScript</title>
+</head>
+
+<body>
+
+
+    <h1>Your Shopping Cart</h1>
+
+    <ul id="food_list_items"></ul>
+
+    <input type="text" name="item" id="item" placeholder="Enter The Item">
+
+    <button id="add">Add</button>
+    <button id="remove">Remove</button>
+
+
+    <script>
+        let food_list = ["Apples Pie", "Strawberry Cheesecake", "Tuna Sandwich", "Butter Chicken", "Doughnuts"]
+
+        function printCart() {
+            food_list_items.innerHTML = ""
+
+            for (let food in food_list) {
+                food_list_items.innerHTML += `<li> ${food_list[food]} </li>`
+            }
+
+        }
+
+        printCart()
+
+        const item = document.getElementById('item')
+
+        document.getElementById('add').addEventListener("click", function () {
+            if (food_list.includes(item.value)) {
+                alert('Item Already Exists.')
+            } else {
+
+                food_list.push(item.value)
+            }
+
+
+            printCart()
+        })
+
+        document.getElementById('remove').addEventListener("click", function () {
+            food_list = food_list.filter(function (value, index, arr) {
+                return value != item.value;
+            });
+
+            printCart()
+        })
+
+    </script>
+</body>
+
+</html>

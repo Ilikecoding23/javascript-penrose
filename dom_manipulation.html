@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_styling.css">
+    <title>DOM Manipulation</title>
+</head>
+
+<body>
+    <h1>DOM Manipulation</h1>
+
+    <div class="box">
+        <h2 id="title">Heading 1</h2>
+        <p id="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi deserunt sit rem excepturi? Illum
+            accusamus
+            quibusdam veniam, assumenda neque optio voluptate quae sed cumque ab nulla, velit nam dignissimos
+            temporibus!</p>
+    </div>
+
+    <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero tenetur commodi aperiam ratione expedita odio? Provident voluptatem, numquam tempore, ut, rem aut dolorem fugiat animi enim vel id placeat quo.</p>
+
+    <input type="text" name="car_name" id="car_name" value="Porsche">
+
+    <p class="quote">World Is Stressful. But Still Live Lively.</p>
+
+    <script>
+        const title = document.getElementById("title")
+        const desc = document.getElementById("desc")
+        const quote = document.querySelector(".quote")
+
+        // const user_title = prompt("Enter the name of your character.")
+        // const user_desc = prompt("Enter the role of your character.")
+
+        title.innerHTML = "Brian O Conner"
+        desc.innerHTML = "<h1>Great Racer and mechanic</h1>Father of a kid."
+
+        document.getElementById("text").innerText = "<h1>Check it out!</h1>"
+
+        console.log(title.textContent)
+
+        title.innerHTML = title.textContent + " - Drag Racer"
+
+        console.log(title.textContent)
+
+        const car_name = document.getElementById("car_name")
+
+        console.log(car_name.value)
+
+        quote.style.backgroundColor = "red";
+        quote.style.color = "white";
+        quote.style.padding = "15px";
+        quote.style.textAlign = "center";
+
+        // alert(quote.textContent)
+    </script>
+</body>
+
+</html>

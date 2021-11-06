@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_styling.css">
+    <title>Strings</title>
+</head>
+<body>
+    <h1>Strings</h1>
+
+    <script>
+        //          01234
+        let name = "David"
+
+        console.log(name)
+
+        // string indexes
+
+        console.log(name[0])
+        console.log(name[1])
+        console.log(name[2])
+        console.log(name[3])
+        console.log(name[4])
+
+        // length - how many characters are there in a string
+
+        console.log(name.length)
+
+        // trim - removes any unwanted space before and after the string
+
+        let address = "     Dubai, UAE  ".trim()
+
+        console.log(`${name} lives in ${address}.`)
+
+        // split - splits the string into an array using a separator
+        const address_info = address.split(",")
+
+        console.log(address_info)
+
+        // toLowerCase - changes all the characters in a string to lower case
+        console.log(name.toLowerCase())
+
+        // toUpperCase - changes all the characters in a string to upper case
+        console.log(name.toUpperCase())
+         
+    </script>
+</body>
+</html>

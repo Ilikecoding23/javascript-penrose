@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="base_styling.css">
+    <title>Numbers</title>
+</head>
+<body>
+    <h1>Numbers</h1>
+
+    <ul id="answers">
+
+    </ul>
+
+    <script>
+        const answers = document.getElementById("answers")
+
+        // let num1 = parseInt(prompt("Enter the first number:"))
+        // let num2 = parseInt(prompt("Enter the second number:")) 
+
+        // let sum = num1+num2
+        // let difference = num1-num2
+        // let product = num1*num2
+        // let quotient = num1/num2
+        
+        // // modulus gives the remainder of the division
+        // let remainder = num1%num2
+
+        // let exponent = num1 ** num2
+
+        // answers.innerHTML += `<li>Sum: ${sum}</li>`
+        // answers.innerHTML += `<li>Difference: ${difference}</li>`
+        // answers.innerHTML += `<li>Product: ${product}</li>`
+        // answers.innerHTML += `<li>Quotient: ${quotient}</li>`
+        // answers.innerHTML += `<li>Remainder: ${remainder}</li>`
+        // answers.innerHTML += `<li>Exponent: ${exponent}</li>`
+
+        // Math.round()
+
+        let random_num = 1.609
+
+        answers.innerHTML += `<li>${Math.round(random_num)}</li>`
+
+        // Math.sqrt() - find the square root of a number
+        answers.innerHTML += `<li>${Math.sqrt(25)}</li>`
+
+        // Math.random() - generate random numbers - 0 to 10
+        answers.innerHTML += `<li>${Math.round(Math.random() * 10)}</li>`
+        
+    </script>
+</body>
+</html>
